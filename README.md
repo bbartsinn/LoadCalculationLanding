@@ -1,6 +1,6 @@
 # Real World Electric — Smart Planning Tools (Landing Page)
 
-Landing page for https://smartplanning.realworldelectric.com/ — the hub for Real World Electric's free tools for electricians and service experts, starting with the Calgary & Edmonton Electrical Load Calculator.
+Landing page for https://realworldelectric.com/ — the hub for Real World Electric's free tools for electricians and service experts, starting with the Calgary & Edmonton Electrical Load Calculator.
 
 ## Why the site wasn't ranking (July 2026 audit)
 
@@ -22,7 +22,7 @@ On-page: single-file page with inlined critical CSS (fast LCP), mobile-first lay
 - [ ] **Generate the social image:** open `og-image-generator.html` in a browser, click Download, commit the file as `assets/og-image.png`. The page already references it.
 - [ ] **Google Search Console:** verify `smartplanning.realworldelectric.com` (DNS or HTML-file method), submit `sitemap.xml`, then use **URL Inspection → Request Indexing** on the homepage. This alone typically gets the page indexed within days.
 - [ ] **Bing Webmaster Tools:** same thing (imports from GSC in one click).
-- [ ] **Link the calculator app back here:** add a visible link on `loadcalculation.realworldelectric.com` (header or footer) to `https://smartplanning.realworldelectric.com/` — it's already indexed, so it passes discovery + relevance. Also add a proper `<title>`, meta description and canonical to the app while you're in there.
+- [ ] **Link the calculator app back here:** add a visible link on `loadcalculation.realworldelectric.com` (header or footer) to `https://realworldelectric.com/` — it's already indexed, so it passes discovery + relevance. Also add a proper `<title>`, meta description and canonical to the app while you're in there.
 - [ ] **Google Business Profile:** add the smartplanning URL as the website (or a link) on the Real World Electric GBP listing — the strongest local signal available for "Calgary" queries.
 - [ ] **Update directory listings** (YellowPages, Facebook page, etc.) to link to the tool.
 - [ ] **Earn 3–5 real local links:** Calgary/Edmonton home-builder forums, Reddit (r/Calgary, r/alberta, r/electricians when relevant), secondary-suite Facebook groups, ENMAX/EPCOR adjacent blogs, BILD Calgary members. One genuinely useful "free tool that fills the City form for you" post outperforms any on-page tweak.
