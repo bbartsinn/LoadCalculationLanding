@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://smartplanning.realworldelectric.com/sitemap.xml
+Sitemap: https://realworldelectric.com/sitemap.xml
