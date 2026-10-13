@@ -1,0 +1,1 @@
+Publish directory for the Render static service that only 301-redirects smartplanning.realworldelectric.com/* to https://realworldelectric.com/* (interim until the Flask cutover in Load_Calc2.0 PR #1).
