@@ -1,38 +1,38 @@
-# Real World Electric — Smart Planning Tools (Landing Page)
+# Real World Electric website
 
-Landing page for https://realworldelectric.com/ — the hub for Real World Electric's free tools for electricians and service experts, starting with the Calgary & Edmonton Electrical Load Calculator.
+Static source for https://realworldelectric.com. The calculator remains a separate application at https://loadcalculation.realworldelectric.com/.
 
-## Why the site wasn't ranking (July 2026 audit)
+## Pages
 
-The single biggest problem: **the page was not indexed by Google at all.** It appeared for zero queries, including a search for its own exact URL. No amount of on-page SEO matters until Google indexes the page. Contributing causes, in order of impact:
+- `/`: residential electrical load planning, CEC Section 8 context, services and guides.
+- `/single-line-diagrams/`: qualified diagram service and email-draft request flow.
+- `/load-calculation-sign-off/`: existing online and in-home review options.
+- `/homeowner-consultations/`: $150 CAD / 60-minute video consultations, currently requested by email.
+- `/guides/`: five guides covering residential load planning and homeowner consultations.
 
-1. **Never verified in Google Search Console / never submitted the sitemap.** New subdomains with no inbound links can sit unindexed indefinitely — Google simply never discovers them.
-2. **Zero backlinks.** Nothing anywhere on the web linked to `smartplanning.realworldelectric.com`. Even the calculator app (which *is* indexed) didn't link back to it.
-3. **Authority split across three separate subdomains.** Google treats `realworldelectric.com` (empty), `smartplanning.*` (landing) and `loadcalculation.*` (app) as three unrelated sites. Competitors (24/7 Electric, Flux Renewables, Hauer Power) host their calculators on established domains with service pages, reviews and years of links.
-4. **Visible keyword-stuffing block** ("Built for searches like yours" grid of raw search queries) — a classic low-quality signal.
-5. **FAQ structured data didn't match the visible FAQ** — different questions in the JSON-LD than on the page.
-6. **Weak social preview** — `og:image` pointed at a square logo instead of a 1200×630 card, so shared links looked broken/bland.
+This is plain HTML, CSS and small progressive JavaScript enhancements. There is no build step, framework, remote font or required external runtime dependency. Serve the repository root as the static site. Shared navigation remains usable without JavaScript.
 
-## What was changed in the redesign
+## Consultation and request behavior
 
-On-page: single-file page with inlined critical CSS (fast LCP), mobile-first layout with hamburger nav and sticky mobile CTA, cleaned title/description, removed meta keywords and the visible keyword grid, `Electrician` + `WebSite` + `SoftwareApplication` + `FAQPage` structured data where the FAQ schema exactly matches the visible FAQ, proper OG/Twitter card tags with a real 1200×630 image, SVG favicon, tools-hub section positioning the site as a growing toolbox for Alberta electricians.
+The consultation links currently open an email draft. They do not reserve a time, charge a card or create a meeting. Cal.com/Stripe activation is separate work; only replace these links after a real paid booking URL and its behavior have been verified. Keep the $150 CAD / 60-minute terms consistent across the service page, guide and metadata.
 
-## Launch checklist (do these — they matter more than the page itself)
+The SLD form validates input, presents an editable draft and offers an email link plus copy fallback. It never claims to submit or upload files. No customer test messages should be sent during verification.
 
-- [ ] **Generate the social image:** open `og-image-generator.html` in a browser, click Download, commit the file as `assets/og-image.png`. The page already references it.
-- [ ] **Google Search Console:** verify `smartplanning.realworldelectric.com` (DNS or HTML-file method), submit `sitemap.xml`, then use **URL Inspection → Request Indexing** on the homepage. This alone typically gets the page indexed within days.
-- [ ] **Bing Webmaster Tools:** same thing (imports from GSC in one click).
-- [ ] **Link the calculator app back here:** add a visible link on `loadcalculation.realworldelectric.com` (header or footer) to `https://realworldelectric.com/` — it's already indexed, so it passes discovery + relevance. Also add a proper `<title>`, meta description and canonical to the app while you're in there.
-- [ ] **Google Business Profile:** add the smartplanning URL as the website (or a link) on the Real World Electric GBP listing — the strongest local signal available for "Calgary" queries.
-- [ ] **Update directory listings** (YellowPages, Facebook page, etc.) to link to the tool.
-- [ ] **Earn 3–5 real local links:** Calgary/Edmonton home-builder forums, Reddit (r/Calgary, r/alberta, r/electricians when relevant), secondary-suite Facebook groups, ENMAX/EPCOR adjacent blogs, BILD Calgary members. One genuinely useful "free tool that fills the City form for you" post outperforms any on-page tweak.
-- [ ] **After sharing on social:** run the URL through Facebook Sharing Debugger and LinkedIn Post Inspector once to refresh their cache of the new og-image.
-- [ ] **Longer term:** consider consolidating tools onto one domain (e.g. `realworldelectric.com/tools/...`) so every link builds one site's authority instead of three.
+## Public indexing
 
-## Files
+Production pages use self-referencing realworldelectric.com canonicals and permit indexing. `robots.txt` allows crawling and points to `sitemap.xml`, which contains all ten public content routes. Keep sitemap modification dates tied to meaningful page changes. The original four guide bodies are preserved, so their prior content dates remain.
 
-- `index.html` — the landing page (all CSS inlined; `styles.css` no longer used)
-- `assets/favicon.svg` — favicon
-- `assets/og-image.png` — social preview card (generate via `og-image-generator.html`)
-- `og-image-generator.html` — one-click generator for the social card (not linked from the site)
-- `sitemap.xml`, `robots.txt`
+The separate owner-private review site has noindex/Disallow settings. Never copy those restrictions into this production tree. Search Console property or Change of Address settings do not need to change for a redesign on the same domain. An optional request to recrawl important updated/new pages does not guarantee indexing.
+
+After release, check public HTTP responses, canonical URLs, the sitemap and the absence of hosting-level X-Robots-Tag: noindex. A successful Git push alone does not prove that hosting has finished deployment.
+
+## Maintenance and validation
+
+- `assets/site.css` and `assets/site.js`: shared design/navigation.
+- Page styles and the SLD request script are separate files.
+- Keep shared headers and footers consistent across all ten HTML pages.
+- `DESIGN_RESOURCES.md` and `assets/licenses/` retain source attribution and licenses.
+
+Run `python scripts/check_site.py`, `node --check assets/site.js`, `node --check assets/sld-request.js`, and `git diff --check`. Browser verification should cover narrow and desktop layouts, keyboard navigation, email-draft review/edit/copy, and no-JavaScript contact links. Automated checks do not replace screen-reader testing.
+
+The calculator application, its backend and the separate migration repository are outside this website release. No calculator compliance or inspection-approval guarantee is made.

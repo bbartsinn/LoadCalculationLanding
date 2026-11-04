@@ -1,0 +1,41 @@
+{
+  "commit": "1980e3d59b0fa1a2aeb566d5902b25ee98204001",
+  "files": [
+    {
+      "file": "copy.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/1980e3d59b0fa1a2aeb566d5902b25ee98204001/icons/copy.svg",
+      "sha256": "ea80e566c7a12628a447cb53179b19aea4f60b9143e2becd0d0f20bf260e5718",
+      "bytes": 339
+    },
+    {
+      "file": "mail.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/1980e3d59b0fa1a2aeb566d5902b25ee98204001/icons/mail.svg",
+      "sha256": "3236a51d5b8ce9b0528cf2e6ad07e527bd636dded6f5a9d656072052b99caea8",
+      "bytes": 316
+    },
+    {
+      "file": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/1980e3d59b0fa1a2aeb566d5902b25ee98204001/LICENSE",
+      "sha256": "b495047bd93a9b06913511076f504daba17d5bbeb3e0650f3bb53a4220329c57",
+      "bytes": 3208
+    },
+    {
+      "file": "arrow-up-right.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/1980e3d59b0fa1a2aeb566d5902b25ee98204001/icons/arrow-up-right.svg",
+      "sha256": "50b2503b9d11881142255466b7e3461d022b919735841c321d72003ac9959fe1",
+      "bytes": 260
+    },
+    {
+      "file": "arrow-right.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/1980e3d59b0fa1a2aeb566d5902b25ee98204001/icons/arrow-right.svg",
+      "sha256": "288397fdb73bb4f783cf9eabb726ff47357df1d4e3f1201dd748090579f108b9",
+      "bytes": 261
+    },
+    {
+      "file": "calculator.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/1980e3d59b0fa1a2aeb566d5902b25ee98204001/icons/calculator.svg",
+      "sha256": "a6b191250b1ffabdf9fc9536662309f1b0f65336aa681d75bae9f1708baaefd0",
+      "bytes": 523
+    }
+  ]
+}

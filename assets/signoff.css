@@ -1,0 +1,298 @@
+/* Residential review and sign-off service. */
+.signoff-page .service-credential {
+  margin:0 0 22px;
+  font-size:.78rem;
+  font-weight:650;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.signoff-intro {
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  align-items:start;
+  gap:56px;
+  padding-top:80px;
+  padding-bottom:80px;
+}
+.signoff-heading h1 {
+  font-size:clamp(2.5rem,4.6vw,4rem);
+  font-weight:550;
+  line-height:1.04;
+  letter-spacing:-.055em;
+  margin:0 0 26px;
+}
+.signoff-heading>p:not(.service-credential) {
+  font-size:1.08rem;
+  color:var(--muted);
+  max-width:30ch;
+  line-height:1.6;
+  margin:0 0 30px;
+}
+.signoff-heading .button {
+  gap:24px;
+}
+.offer-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+}
+.offer-card {
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  padding:28px 24px;
+}
+.offer-card h2 {
+  font-size:1.05rem;
+  font-weight:600;
+  letter-spacing:-.02em;
+  margin:0 0 30px;
+}
+.offer-card .price {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:baseline;
+  gap:6px;
+  margin:0 0 24px;
+  color:var(--ink);
+  line-height:1.1;
+}
+.price-prefix {
+  display:block;
+  width:100%;
+  margin-bottom:6px;
+  color:var(--muted);
+  font-size:.8rem;
+}
+.price-amount {
+  font-size:2.9rem;
+  font-weight:500;
+  letter-spacing:-.065em;
+}
+.price-currency {
+  font-size:.85rem;
+  color:var(--muted);
+}
+.offer-card>p:last-child {
+  font-size:.92rem;
+  color:var(--muted);
+  line-height:1.6;
+  margin:0;
+}
+.offer-terms {
+  margin:20px 0 0;
+  font-size:.85rem;
+  color:var(--muted);
+  line-height:1.65;
+}
+.signoff-request,.signoff-questions {
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  gap:56px;
+  border-top:1px solid var(--line);
+  padding-block:64px;
+}
+.signoff-request h2,.signoff-questions h2 {
+  font-size:clamp(1.6rem,2.8vw,2.15rem);
+  font-weight:550;
+  letter-spacing:-.04em;
+  margin:0 0 22px;
+}
+.signoff-request-heading>p {
+  max-width:35ch;
+  color:var(--muted);
+  font-size:.97rem;
+  margin:0;
+}
+.signoff-actions {
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  align-items:center;
+  margin-top:28px;
+}
+.signoff-actions .button {
+  gap:18px;
+}
+.signoff-phone {
+  color:var(--ink);
+  font-size:.94rem;
+  white-space:nowrap;
+}
+.signoff-document-list {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.signoff-document-list li {
+  position:relative;
+  padding:19px 0 19px 30px;
+  border-bottom:1px solid var(--line);
+  font-size:1rem;
+  line-height:1.55;
+}
+.signoff-document-list li:first-child {
+  padding-top:0;
+}
+.signoff-document-list li::before {
+  content:'\2713';
+  position:absolute;
+  left:0;
+  color:#506044;
+  font-size:1rem;
+  font-weight:600;
+}
+.signoff-questions {
+  padding-bottom:88px;
+}
+.signoff-questions summary {
+  font-size:.98rem;
+  font-weight:550;
+  padding-block:21px;
+}
+.signoff-questions details:first-child {
+  border-top:0;
+}
+.signoff-questions details:first-child>summary {
+  padding-top:0;
+}
+.signoff-questions details:first-child>summary::after {
+  top:0;
+}
+.signoff-questions details p {
+  font-size:.95rem;
+  line-height:1.65;
+}
+.signoff-permit-note {
+  color:var(--muted);
+  font-size:.85rem;
+  line-height:1.65;
+  margin:28px 0 0;
+}
+#book {
+  scroll-margin-top:112px;
+}
+@media(max-width:1050px) {
+  .signoff-intro {
+    grid-template-columns:1fr;
+    gap:38px;
+    padding-top:64px;
+  }
+  .signoff-heading h1 {
+    font-size:3.6rem;
+  }
+  .signoff-heading>p:not(.service-credential) {
+    max-width:44ch;
+  }
+  .signoff-options {
+    max-width:760px;
+  }
+  .offer-card {
+    padding:28px;
+  }
+  .offer-card h2 {
+    margin-bottom:24px;
+  }
+  .signoff-request,.signoff-questions {
+    gap:36px;
+  }
+}
+@media(max-width:720px) {
+  .signoff-page .service-credential {
+    margin-bottom:18px;
+  }
+  .signoff-intro {
+    padding-top:44px;
+    padding-bottom:42px;
+    gap:32px;
+  }
+  .signoff-heading h1 {
+    font-size:2.9rem;
+    margin-bottom:22px;
+  }
+  .signoff-heading>p:not(.service-credential) {
+    font-size:1rem;
+    margin-bottom:26px;
+  }
+  .offer-grid {
+    gap:14px;
+  }
+  .offer-card {
+    padding:22px 20px;
+  }
+  .offer-card h2 {
+    font-size:1rem;
+    margin-bottom:22px;
+  }
+  .price-amount {
+    font-size:2.5rem;
+  }
+  .offer-card>p:last-child {
+    font-size:.88rem;
+  }
+  .offer-terms {
+    margin-top:18px;
+  }
+  .signoff-request,.signoff-questions {
+    grid-template-columns:1fr;
+    gap:30px;
+    padding-block:36px;
+  }
+  .signoff-request-heading>p {
+    max-width:none;
+  }
+  .signoff-document-list li {
+    font-size:.96rem;
+  }
+  .signoff-questions {
+    gap:10px;
+    padding-bottom:48px;
+  }
+}
+@media(max-width:540px) {
+  .offer-grid {
+    grid-template-columns:1fr;
+  }
+  .offer-card {
+    display:grid;
+    grid-template-columns:1fr auto;
+    column-gap:16px;
+    padding:24px;
+  }
+  .offer-card h2 {
+    align-self:center;
+    margin:0 0 20px;
+  }
+  .offer-card .price {
+    margin:0 0 20px;
+    max-width:130px;
+    justify-content:flex-end;
+  }
+  .price-prefix {
+    text-align:right;
+  }
+  .offer-card>p:last-child {
+    grid-column:1/-1;
+    font-size:.94rem;
+  }
+  .signoff-actions {
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+@media(max-width:360px) {
+  .signoff-heading h1 {
+    font-size:2.5rem;
+  }
+  .offer-card {
+    padding:22px 18px;
+    column-gap:10px;
+  }
+  .offer-card h2 {
+    font-size:.95rem;
+  }
+  .price-amount {
+    font-size:2.25rem;
+  }
+}

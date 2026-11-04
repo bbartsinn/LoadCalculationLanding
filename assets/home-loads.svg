@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" fill="none">
+  <title>Residential electrical loads</title>
+  <desc>An illustrated home and secondary suite with a range, heat pump and electric vehicle connected to the electrical service. This is a planning illustration, not a wiring diagram.</desc>
+  <style>
+    /* Paired-path trace adapted from Magic UI Animated Beam; MIT license retained. */
+    .service-trace { stroke-dasharray:420; stroke-dashoffset:420; animation:service-trace 2.5s ease-out .2s forwards; }
+    @keyframes service-trace { to { stroke-dashoffset:0; } }
+    @media (prefers-reduced-motion:reduce) { .service-trace { animation:none; stroke-dashoffset:0; } }
+  </style>
+  <defs>
+    <linearGradient id="wall" x1="150" y1="140" x2="455" y2="350" gradientUnits="userSpaceOnUse"><stop stop-color="#fffdf5"/><stop offset="1" stop-color="#eceadd"/></linearGradient>
+    <linearGradient id="roof" x1="160" y1="80" x2="410" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#53634e"/><stop offset="1" stop-color="#2c392b"/></linearGradient>
+    <linearGradient id="ground" x1="40" y1="350" x2="550" y2="390" gradientUnits="userSpaceOnUse"><stop stop-color="#e1e7d5"/><stop offset="1" stop-color="#f0f0e6"/></linearGradient>
+    <pattern id="roofLines" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(-24)"><path d="M0 0v18" stroke="#9eac8e" stroke-width="1" opacity=".3"/></pattern>
+    <filter id="shadow" x="0" y="0" width="600" height="440" filterUnits="userSpaceOnUse"><feGaussianBlur stdDeviation="8"/></filter>
+  </defs>
+  <ellipse cx="313" cy="357" rx="232" ry="35" fill="#727c60" opacity=".1" filter="url(#shadow)"/>
+  <path d="m48 354 249-71 259 72-246 69Z" fill="url(#ground)"/>
+  <path d="m156 170 153-82 140 81v173L296 390l-140-74Z" fill="url(#wall)" stroke="#b8bca9" stroke-width="1.3"/>
+  <path d="m296 215 153-46v173l-153 48Z" fill="#e6e6da" stroke="#b8bca9" stroke-width="1.3"/>
+  <path d="m156 170 140 45v175l-140-74Z" fill="#f8f6eb" stroke="#b8bca9" stroke-width="1.3"/>
+  <path d="m136 169 146-110 187 105-174 55Z" fill="url(#roof)" stroke="#394632" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="m136 169 146-110 187 105-174 55Z" fill="url(#roofLines)"/>
+  <path d="m136 169 159 50 174-55v9l-174 55-159-50Z" fill="#273624" stroke="#394632" stroke-width="1.2"/>
+  <path d="m369 112 0-42 21-6 19 11v57" fill="#b3b6a3" stroke="#7e886e" stroke-width="1.3"/>
+  <path d="m369 70 19 11 21-6m-21 6v41" stroke="#7e886e" stroke-width="1.3"/>
+  <!-- Open front elevation makes the home and secondary suite legible. -->
+  <path d="m172 195 108 35v132l-108-57Z" fill="#e9e4d3" stroke="#9dA58f" stroke-width="1.3"/>
+  <path d="m172 195 108 35v68l-108-45Z" fill="#fffcf2"/>
+  <path d="m172 260 108 45v57l-108-57Z" fill="#f3eddc"/>
+  <path d="m171 253 110 45v9l-110-46Z" fill="#b1ad97"/>
+  <path d="m172 195 108 35v132l-108-57Z" stroke="#a7ab97" stroke-width="1.3"/>
+  <!-- Kitchen range on the upper floor. -->
+  <path d="m233 237 28 10v33l-28-12Z" fill="#e7e9dc" stroke="#67735c" stroke-width="1.3"/>
+  <path d="m233 237 10-6 28 10-10 6Z" fill="#cad0bc" stroke="#67735c" stroke-width="1.3"/>
+  <path d="m240 249 15 6v16l-15-7Z" fill="#596750"/>
+  <path d="m240 239 4 1m8 3 4 1" stroke="#67735c" stroke-width="2" stroke-linecap="round"/>
+  <!-- Furniture distinguishes the second dwelling below. -->
+  <path d="m184 290 58 24v14l-58-25Z" fill="#a3af8e" stroke="#6e7b60" stroke-width="1.2"/>
+  <path d="m184 303 58 25 12-7-58-25Z" fill="#c6cfaf" stroke="#6e7b60" stroke-width="1.2"/>
+  <path d="m184 303 0 12m58 13v12m12-19v13" stroke="#6e7b60" stroke-width="2"/>
+  <path d="m184 216 30 10v25l-30-11Z" fill="#dfe8d2" stroke="#6e7b60" stroke-width="1.2"/>
+  <path d="m199 221 0 24m-15-17 30 11" stroke="#a3b18f" stroke-width="1.2"/>
+  <!-- Windows and entry on the side elevation. -->
+  <path d="m322 227 43-13v36l-43 13Z" fill="#a8baaa" stroke="#6d826f" stroke-width="1.3"/>
+  <path d="m343 221 0 36m-21-12 43-13" stroke="#f2f4e8" stroke-width="2"/>
+  <path d="m389 207 37-11v36l-37 11Z" fill="#a8baaa" stroke="#6d826f" stroke-width="1.3"/>
+  <path d="m407 202 0 36m-18-12 37-11" stroke="#f2f4e8" stroke-width="2"/>
+  <path d="m376 284 39-12v80l-39 12Z" fill="#78866b" stroke="#53614c" stroke-width="1.3"/>
+  <path d="m383 291 25-8v29l-25 8Z" fill="#b8c8af"/>
+  <path d="M404 324v9" stroke="#f4cf53" stroke-width="2"/>
+  <!-- Service panel and heat pump. -->
+  <path d="m312 281 25-8v37l-25 8Z" fill="#f4cf53" stroke="#8f7d38" stroke-width="1.3"/>
+  <circle cx="325" cy="291" r="6" fill="#fff7cf" stroke="#8f7d38" stroke-width="1.2"/>
+  <path d="M320 306l10-3" stroke="#8f7d38" stroke-width="1.4"/>
+  <path d="m449 290 29 9v40l-29-10Z" fill="#c7cdb9" stroke="#738167" stroke-width="1.3"/>
+  <path d="m478 299 17-7v40l-17 7Z" fill="#a4ae94" stroke="#738167" stroke-width="1.3"/>
+  <path d="m449 290 17-7 29 9-17 7Z" fill="#e0e5d3" stroke="#738167" stroke-width="1.3"/>
+  <ellipse cx="464" cy="314" rx="9" ry="13" stroke="#738167" stroke-width="1.3"/>
+  <path d="m458 305 12 19m-12-4 12-11" stroke="#738167" stroke-width="1.3"/>
+  <!-- Electric vehicle and charger. -->
+  <path d="m77 328 32-21 42 9 15 28-35 19-52-20Z" fill="#e4e8dc" stroke="#728066" stroke-width="1.4"/>
+  <path d="m89 328 24-15 29 7 10 15-28 15Z" fill="#91a6a0" stroke="#728066" stroke-width="1.2"/>
+  <path d="m124 350 7 13m-18-50 11 37" stroke="#728066" stroke-width="1.2"/>
+  <ellipse cx="91" cy="348" rx="7" ry="10" fill="#35452f" transform="rotate(-24 91 348)"/>
+  <ellipse cx="145" cy="359" rx="7" ry="10" fill="#35452f" transform="rotate(-24 145 359)"/>
+  <path d="m66 284 17 5v37l-17-6Z" fill="#58694c" stroke="#34442b" stroke-width="1.3"/>
+  <path d="m70 292 9 3v9l-9-3Z" fill="#f4cf53"/>
+  <path d="M66 304c-19-8-23 26-4 29l21 4" stroke="#4c5d42" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Conceptual service connections, not conductor routing. -->
+  <path d="M324 317v33l-48 17-134-56-59-22M324 350l126-36" stroke="#b49839" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 5"/>
+  <path class="service-trace" d="M324 317v33l-48 17-134-56-59-22M324 350l126-36" stroke="#c6a13c" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="324" cy="350" r="4" fill="#f4cf53" stroke="#8f7d38" stroke-width="1.2"/>
+  <!-- Landscape keeps the illustration grounded in a residential setting. -->
+  <path d="M517 340v-38" stroke="#80906b" stroke-width="2"/>
+  <path d="M517 319c-28-3-22-28-12-31 3-28 33-24 31 0 15 9 12 31-19 31Z" fill="#c0cea5" stroke="#95a87c" stroke-width="1.2"/>
+  <path d="M122 265v-43" stroke="#80906b" stroke-width="2"/>
+  <path d="M122 247c-23-3-22-21-11-28-1-22 26-25 27-3 19 13 8 35-16 31Z" fill="#d3dcbb" stroke="#a3b38a" stroke-width="1.2"/>
+</svg>

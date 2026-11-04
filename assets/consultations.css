@@ -1,0 +1,69 @@
+.consult-hero { padding:68px 0 72px; }
+.consult-grid { display:grid; grid-template-columns:1.2fr .85fr; gap:84px; align-items:center; }
+.consult-intro h1 { font-size:clamp(42px,4.8vw,65px); line-height:1.04; margin-bottom:27px; }
+.consult-intro .standfirst { max-width:44ch; }
+.consult-detail { color:var(--muted); font-size:16px; line-height:1.7; max-width:52ch; margin:18px 0 24px; }
+.consult-actions { display:flex; flex-wrap:wrap; align-items:center; gap:13px 20px; margin-bottom:14px; }
+.consult-actions span { font-size:13px; color:var(--muted); }
+.consult-booking { border:1px solid #d1d4c8; border-radius:12px; background:white; overflow:hidden; }
+.consult-booking>img { width:100%; height:auto; background:#efefe7; border-bottom:1px solid #e1e2d9; }
+.booking-content { padding:28px; }
+.booking-content h2 { font-size:26px; line-height:1.2; }
+.consult-price { font-size:60px; letter-spacing:-.06em; line-height:1.15; margin:20px 0 3px; }
+.consult-price span { font-size:15px; letter-spacing:0; color:var(--muted); }
+.booking-format { font-size:14px; color:var(--muted); margin-bottom:24px; }
+.booking-note { font-size:13px; color:var(--muted); line-height:1.65; margin-top:15px; }
+.consult-topics { padding-top:0; }
+.topic-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px; }
+.topic-grid article { border-top:1px solid var(--line); padding-top:22px; }
+.topic-number { font-size:12px; color:var(--muted); }
+.topic-grid h3 { margin:20px 0 14px; font-size:26px; }
+.topic-grid p,.section-description,.milestone-list p,.prepare-grid p,.scope-grid p,.consult-bottom p { font-size:16px; color:var(--muted); line-height:1.75; }
+.topic-note { margin-top:30px; max-width:80ch; font-size:14px; color:var(--muted); line-height:1.7; }
+.consult-milestones { background:#eeeee6; border-block:1px solid var(--line); }
+.milestone-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px 90px; }
+.milestone-grid h2 { max-width:12ch; margin-bottom:24px; }
+.section-description { max-width:40ch; }
+.milestone-list { list-style:none; }
+.milestone-list li { padding-left:27px; position:relative; border-left:1px solid #c4c8bc; padding-bottom:31px; }
+.milestone-list li:last-child { padding-bottom:0; }
+.milestone-list li::before { content:''; position:absolute; width:9px; height:9px; border:1px solid #806400; border-radius:50%; background:var(--volt); left:-5px; top:9px; }
+.milestone-list h3 { font-size:25px; margin-bottom:12px; }
+.followup-note { grid-column:1/-1; border-top:1px solid #d5d7cd; padding-top:22px; color:var(--muted); font-size:14px; max-width:90ch; }
+.prepare-grid,.scope-grid { display:grid; grid-template-columns:1fr 1fr; gap:90px; }
+.prepare-grid h2 { max-width:15ch; margin-bottom:22px; }
+.prepare-grid p { max-width:34ch; }
+.prepare-list { list-style:none; }
+.prepare-list li { padding:16px 0 16px 24px; position:relative; border-bottom:1px solid var(--line); }
+.prepare-list li:first-child { border-top:1px solid var(--line); }
+.prepare-list li::before { content:'\2192'; position:absolute; left:0; color:#806400; }
+.consult-scope { border-block:1px solid var(--line); }
+.scope-grid h2 { max-width:13ch; }
+.scope-grid p+p { margin-top:18px; }
+.scope-grid .text-link { margin-top:15px; }
+.consult-bottom { text-align:center; }
+.consult-bottom h2 { margin-bottom:18px; }
+.consult-bottom p { max-width:48ch; margin:0 auto 25px; }
+.consult-bottom .text-link { margin-left:24px; }
+@media(max-width:1050px) {
+  .consult-grid { gap:38px; grid-template-columns:1.1fr .9fr; }
+  .consult-intro h1 { font-size:49px; }
+  .milestone-grid,.prepare-grid,.scope-grid { gap:40px; }
+  .booking-content { padding:24px; }
+}
+@media(max-width:760px) {
+  .consult-hero { padding:42px 0 48px; }
+  .consult-grid,.topic-grid,.milestone-grid,.prepare-grid,.scope-grid { grid-template-columns:1fr; gap:34px; }
+  .consult-intro h1 { font-size:clamp(39px,8vw,54px); }
+  .consult-intro .standfirst { font-size:17px; }
+  .consult-detail { font-size:15px; }
+  .consult-booking { max-width:480px; width:100%; }
+  .consult-booking>img { max-height:220px; object-fit:cover; }
+  .consult-price { font-size:55px; }
+  .consult-topics { padding-top:0; }
+  .topic-grid { gap:27px; }
+  .topic-grid h3 { margin-top:12px; }
+  .milestone-grid h2,.prepare-grid h2,.scope-grid h2 { max-width:18ch; }
+  .followup-note { font-size:13px; }
+  .consult-bottom .text-link { margin:15px 14px 0; }
+}

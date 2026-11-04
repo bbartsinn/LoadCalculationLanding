@@ -1,0 +1,130 @@
+/* Guide index only. Article content and styles remain separate. */
+.guide-index {
+  background:#f8f8f4;
+}
+.guide-index .wrap {
+  max-width:1240px;
+}
+.guide-index .article-hero {
+  padding:86px 0 62px;
+}
+.guide-index .article-hero h1 {
+  max-width:15ch;
+  margin:0;
+  font-size:clamp(2.55rem,5.1vw,4.5rem);
+  font-weight:550;
+  line-height:1.06;
+  letter-spacing:-.052em;
+  color:#20241f;
+}
+.guide-index .guide-list {
+  padding:0 0 88px;
+}
+.guide-index .guide-grid {
+  display:block;
+  border-bottom:1px solid #dedfd7;
+}
+.guide-index .guide-card {
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) 24px;
+  align-items:center;
+  gap:56px;
+  position:relative;
+  padding:34px 0;
+  border-top:1px solid #dedfd7;
+  border-radius:0;
+  color:#20241f;
+  text-decoration:none;
+}
+.guide-index .guide-card::before {
+  content:"";
+  position:absolute;
+  inset:0 -20px;
+  background:transparent;
+  pointer-events:none;
+  transition:background-color 160ms ease;
+}
+.guide-index .guide-card > * {
+  position:relative;
+}
+.guide-index .guide-card h2 {
+  margin:0;
+  color:inherit;
+  font-size:clamp(1.35rem,2.1vw,1.75rem);
+  line-height:1.2;
+  letter-spacing:-.035em;
+  font-weight:550;
+}
+.guide-index .guide-card p {
+  max-width:39ch;
+  margin:0;
+  color:#60665f;
+  font-size:1rem;
+  line-height:1.55;
+}
+.guide-index .guide-arrow {
+  flex:none;
+  color:#20241f;
+  transition:transform 160ms ease;
+}
+.guide-index .guide-card:hover::before,.guide-index .guide-card:focus-visible::before {
+  background:#fff;
+}
+.guide-index .guide-card:hover h2 {
+  text-decoration:none;
+}
+.guide-index .guide-card:focus-visible {
+  outline:2px solid #20241f;
+  outline-offset:6px;
+}
+.guide-index .guide-card:hover .guide-arrow {
+  transform:translateX(3px);
+}
+.guide-index .guide-calculator {
+  display:flex;
+  justify-content:flex-end;
+  padding-top:42px;
+}
+@media(max-width:760px) {
+  .guide-index .article-hero {
+    padding:54px 0 42px;
+  }
+  .guide-index .guide-list {
+    padding-bottom:60px;
+  }
+  .guide-index .guide-card {
+    grid-template-columns:minmax(0,1fr) 24px;
+    gap:14px 24px;
+    padding:28px 0;
+  }
+  .guide-index .guide-card h2 {
+    grid-column:1;
+    font-size:1.5rem;
+    max-width:24ch;
+  }
+  .guide-index .guide-card p {
+    grid-column:1;
+    font-size:.95rem;
+  }
+  .guide-index .guide-arrow {
+    grid-column:2;
+    grid-row:1;
+    align-self:start;
+    margin-top:2px;
+  }
+  .guide-index .guide-card::before {
+    inset:0 -12px;
+  }
+  .guide-index .guide-calculator {
+    justify-content:flex-start;
+    padding-top:32px;
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .guide-index .guide-card::before,.guide-index .guide-arrow {
+    transition:none;
+  }
+  .guide-index .guide-card:hover .guide-arrow {
+    transform:none;
+  }
+}
