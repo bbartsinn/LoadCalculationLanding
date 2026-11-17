@@ -656,3 +656,22 @@ footer {
     break-inside:avoid
   }
 }
+
+.footer-contact { margin-top: 14px; }
+.header-mobile-call { display: none; }
+@media (max-width: 900px) {
+  .header-mobile-call {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 12px;
+    margin-left: auto;
+    border-radius: 6px;
+    background: var(--volt);
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .nav-ready .nav-links .nav-cta { display: none; }
+}

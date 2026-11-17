@@ -7,7 +7,7 @@
   const emailLink = document.querySelector('#open-email-draft');
   const stepTitle = document.querySelector('#request-step-title');
   const instructions = document.querySelector('#request-instructions');
-  const email = 'Bart@Realworldelectric.com';
+  const email = 'info@realworldelectric.com';
   const project = form.elements.projectType;
   const distribution = document.querySelector('#distribution-details');
   const solar = document.querySelector('#solar-details');
@@ -32,7 +32,7 @@
     draft.hidden = true;
     draftText.value = '';
     emailLink.removeAttribute('href');
-    stepTitle.textContent = 'Request a diagram';
+    stepTitle.textContent = 'Prepare your diagram request';
     instructions.hidden = false;
     announce('');
   }
@@ -96,9 +96,9 @@
     emailLink.href = `mailto:${email}?subject=${encodeURIComponent('Single-line diagram request: ' + value('projectType'))}&body=${encodeURIComponent(text)}`;
     form.hidden = true;
     instructions.hidden = true;
-    stepTitle.textContent = 'Review your request';
+    stepTitle.textContent = 'Review your diagram request';
     draft.hidden = false;
-    announce('Draft ready. Your request has not been sent.');
+    announce('Draft ready. Open it in your email app to send your diagram request.');
     stepTitle.focus();
   });
 
@@ -108,10 +108,10 @@
       if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
       await navigator.clipboard.writeText(copiedText);
       if (draft.hidden || draftText.value !== copiedText) return;
-      announce(`Copied. Email it to ${email}. Nothing has been sent.`);
+      announce('Diagram request copied. Paste it into an email to Real World Electric.');
     } catch {
       if (draft.hidden || draftText.value !== copiedText) return;
-      announce('Copy was unavailable. Select the request below and copy it manually, then email it to Bart@Realworldelectric.com.', true);
+      announce('Select the diagram request below, copy it, then use the email link to send it to Real World Electric.', true);
       draftText.focus();
       draftText.select();
     }
