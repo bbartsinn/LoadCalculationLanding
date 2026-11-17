@@ -1,4 +1,4 @@
-/* Homepage: purpose, residential inputs, code context, then services and guides. */
+/* Homepage: services, residential inputs, code context and guides. */
 .home-hero { padding:66px 0 62px; }
 .hero-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:52px; align-items:center; }
 .hero-copy h1 { font-size:clamp(46px,4.5vw,64px); max-width:18ch; line-height:1.06; letter-spacing:-.055em; }
@@ -33,13 +33,14 @@
 .code-sources { display:flex; flex-wrap:wrap; gap:10px 28px; margin-top:24px; }
 .code-sources a { display:inline-flex; align-items:center; gap:10px; font-size:13px; min-height:40px; text-decoration-color:#a4ab99; }
 .code-sources svg { width:15px; height:15px; }
-.home-services { padding:70px 0 0; }
+.home-services { padding:54px 0 60px; border-top:1px solid var(--line); }
 .home-services h2 { font-size:34px; }
 .home-services .section-head { margin-bottom:28px; }
-.service-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.service-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 /* Restrained adaptation of Uiverse's border response, with equivalent keyboard feedback. */
 .service-card { position:relative; display:grid; grid-template-columns:1fr 28px; gap:25px; padding:32px 32px 35px 0; text-decoration:none; }
-.service-card+.service-card { border-left:1px solid var(--line); padding-left:28px; padding-right:28px; }
+.service-card:nth-child(even) { border-left:1px solid var(--line); padding-left:28px; }
+.service-card:nth-child(n+3) { border-top:1px solid var(--line); }
 .service-card::before { content:''; position:absolute; left:0; right:0; top:-1px; height:2px; background:var(--ink); transform:scaleX(0); transform-origin:left; transition:transform .22s; }
 .service-card:hover::before,.service-card:focus-visible::before { transform:scaleX(1); }
 .service-card:hover h3 { text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:5px; }
@@ -47,6 +48,10 @@
 .service-card p { font-size:15px; line-height:1.65; color:var(--muted); max-width:45ch; }
 .service-card .service-arrow { width:24px; height:24px; margin-top:3px; }
 .service-meta { margin-top:16px; color:var(--ink)!important; font-size:12px!important; }
+.project-contact { display:flex; align-items:center; justify-content:space-between; gap:32px; padding-top:32px; }
+.project-contact h3 { font-size:23px; letter-spacing:-.025em; }
+.project-contact p { max-width:65ch; color:var(--muted); margin-top:8px; }
+.project-contact .button { flex-shrink:0; }
 .home-guides { padding:70px 0; }
 .home-guides .section-head { margin-bottom:26px; }
 .guide-list { border-bottom:1px solid var(--line); }
@@ -102,11 +107,12 @@
   .code-heading .eyebrow { margin-bottom:16px; }
   .code-copy p { font-size:15px; }
   .code-sources { gap:7px 24px; margin-top:15px; }
-  .home-services { padding:46px 0 0; }
+  .home-services { padding:42px 0; }
   .home-services h2 { font-size:31px; }
   .service-grid { grid-template-columns:1fr; }
   .service-card { padding:27px 0!important; gap:20px; }
   .service-card+.service-card { border-left:0; border-top:1px solid var(--line); }
+  .project-contact { flex-direction:column; align-items:flex-start; gap:18px; }
   .service-card h3 { font-size:25px; }
   .service-card p { font-size:14px; max-width:42ch; }
   .home-guides { padding:48px 0; }
